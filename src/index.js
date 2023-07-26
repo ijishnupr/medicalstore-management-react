@@ -1,13 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import store from './store/store';
 import reportWebVitals from './reportWebVitals';
+import { RouterProvider } from 'react-router-dom';
+import router from './router';
+import { Provider } from 'react-redux';
+import Autologin from './components/authentication/autologin';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <Autologin>
+        <RouterProvider router={router} />
+      </Autologin>
+      
+    </Provider>
   </React.StrictMode>
 );
 
