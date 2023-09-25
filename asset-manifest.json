@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ijishnupr/medicalstore-management-react.git/static/css/main.00a9ceae.css",
+    "main.js": "/ijishnupr/medicalstore-management-react.git/static/js/main.4845c9eb.js",
+    "static/js/787.585b24bb.chunk.js": "/ijishnupr/medicalstore-management-react.git/static/js/787.585b24bb.chunk.js",
+    "static/media/list.png": "/ijishnupr/medicalstore-management-react.git/static/media/list.aa33cd3877d6ef194ec5.png",
+    "index.html": "/ijishnupr/medicalstore-management-react.git/index.html",
+    "main.00a9ceae.css.map": "/ijishnupr/medicalstore-management-react.git/static/css/main.00a9ceae.css.map",
+    "main.4845c9eb.js.map": "/ijishnupr/medicalstore-management-react.git/static/js/main.4845c9eb.js.map",
+    "787.585b24bb.chunk.js.map": "/ijishnupr/medicalstore-management-react.git/static/js/787.585b24bb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.00a9ceae.css",
+    "static/js/main.4845c9eb.js"
+  ]
+}
