@@ -2,10 +2,11 @@ import React from "react";
 function Footer() {
   return <div className="row">
     <div className="col" style={{ backgroundColor: "#52ab98", color: "black" }}>
-      <h3>curemart</h3>
-      <footer class="text-light mt-5 py-3">
+      
+      <footer class="text-light mt-5 ">
+    
         <div class="container text-center">
-          <p class="mb-0">&copy; 2023 Your Website Name</p>
+          <p class="mb-0">&copy; 2023 curemart</p>
         </div>
       </footer>
     </div>

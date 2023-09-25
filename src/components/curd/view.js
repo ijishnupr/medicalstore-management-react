@@ -1,29 +1,52 @@
-import { Fragment } from "react";
-import Header from "../Header";
+import React, { Fragment, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import Header from "../Header";
+
 function Viewmed() {
-    const parms = useParams();
-    var id = parms.id
-    var data = useSelector((store) => store.list)
-    var val = data.find((item) => item.id == id);
-    console.log(val);
+  const params = useParams();
+  const id = params.id;
+  const data = useSelector((store) => store.list);
+  const val = data.find((item) => item.id == id);
+  const [currentDate] = useState(getDate());
 
-    return <Fragment>
-        <div className="container-fluid">
-            <Header />
+  function getDate() {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = today.getMonth() + 1;
+    const date = today.getDate();
+    return { year, month, date };
+  }
 
-            <div className="row ">
-                <div className="col col-5 mx-auto d-block bg-light mt-5">
-                    <h2 className="bg-success rounded text-white text-center">details of {val.name}</h2>
-                    <h5>name :{val.name}</h5>
-                    <h5>company :{val.company}</h5>
-                    <h5>expiry :{val.expiry_date}</h5>
+  const expiryDate = new Date(val.expiry_date);
+  const currentDateObj = new Date();
+  const flag = expiryDate > currentDateObj;
 
+  return (
+    <Fragment>
+      <div className="container-fluid">
+        <Header />
 
-                </div>
-            </div>
+        <div className="row mt-3 ">
+          <div className="col col-7 pt-3 mx-auto d-block bg-light mt-5 rounded">
+            <h2 className="bg-success rounded text-white text-center">
+              Details of {val.name}
+            </h2>
+            {val && (
+              <>
+                <h5>Name: {val.name}</h5>
+                <h5>Company: {val.company}</h5>
+                <h5>Today: {currentDate.year}-{currentDate.month}-{currentDate.date}</h5>
+                <h5 className={flag ? 'text-success' : 'text-danger'}>
+                  Expiry: {val.expiry_date}
+                </h5>
+              </>
+            )}
+          </div>
         </div>
+      </div>
     </Fragment>
+  );
 }
+
 export default Viewmed;

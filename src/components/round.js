@@ -2,8 +2,11 @@
 import './round.css'
 function Round(props) {
 
-    return <div className='col round mt-5'>
-        <h2 className='link'>{props.name}</h2>
+    return <div className='row'>
+
+    <div className='col bg-light roundd'>
+        <div className='link'>{props.name}</div>
+    </div>
     </div>
 }
 export default Round;

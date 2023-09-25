@@ -1,3 +1,6 @@
+body{
+    background-color: #72CAB1;
+}
 .home{
     
     height: 790px;
@@ -7,9 +10,19 @@
     align-items: center;
 
 }
-.bg{
-    background: url('./components/img/bgg.png') no-repeat; 
-}
+
 .colo{
-    background-color: #FCFDFC;
+    background-color: #72CAB1;
 }
+#cur {
+    animation: blink 0.6s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }

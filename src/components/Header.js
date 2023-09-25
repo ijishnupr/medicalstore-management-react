@@ -25,7 +25,7 @@ function Header() {
             <ul className="navbar-nav ml-auto" style={{ color: "#ffffff" }}>
 
                 <li className="nav-item">
-                    <NavLink to={"/"} className="nav-link">
+                    <NavLink to={"/app"} className="nav-link">
                         Home
                     </NavLink>
                 </li>

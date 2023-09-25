@@ -1,16 +1,37 @@
-.round {
-    background-color: #FCFDFB;
-    margin-right: 50px;
-    border-radius: 30px;
-    margin-bottom: 50px;
-}
-
-.link {
-    text-align: center;
-    padding-top: 50px;
+.roundd {
+    font-size: 30px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 530px;
+    min-width:200px;
+    height: 200px;
+    padding-left: 150px;
+    display: flex;
+    border: 10px solid #72CAB1;
     color: #52AB98;
+    align-items: center;
+    
+}
+.roundd div{
+    margin-left: 20px;
 }
 
-.link:hover {
-    color: black;
+.roundd:hover {
+    background-color: black !important;
+    transition: .5s;
+    color:white;
+    font-size: 35px;
+}
+@media (width<300px) {
+    .roundd{
+        
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        width:auto;
+        height: auto;
+        padding-left:0px;
+        display: flex;
+        border:0;
+        color: #52AB98;
+        align-items: center;
+    }
+    
 }

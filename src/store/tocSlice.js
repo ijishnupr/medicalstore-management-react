@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const tocSlice = createSlice({
     name: 'auth',
     initialState: {
-        user:"null",
+        user:null,
     },
     reducers: {
         setuser: (state, action) => {

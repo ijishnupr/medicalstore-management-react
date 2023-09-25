@@ -1,9 +1,9 @@
 
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import Delete from "./curd/delete";
-import { Link } from "react-router-dom";
-function List(props) {
+import { Link, useNavigate } from "react-router-dom";
 
+function List(props) {
     var data = props.list;
     var id = data.id;
     var url = '/view/' + id;
@@ -12,8 +12,8 @@ function List(props) {
         <div className="row">
 
 
-            <div className="col bg-light rounded">
-                <p className="btn">{id}<Link to={url} > <span className="bg-white mr-3 mt-2 detail" style={{ fontWeight: 'bold' }}>
+            <div className="col">
+                <p className="btn btn-outline-light text-left" style={{ width: '250px' }} >{id}&nbsp;:<Link style={{textDecoration:'none'}} to={url} > <span className="mr-3 mt-2 detail" style={{ fontWeight: 'bold' }}>
                     name : {data.name} </span> </Link></p>
             </div>
             <div className="col"><Link className="btn btn-info" to={url2}>Edit</Link> <Delete id={id} /></div>
